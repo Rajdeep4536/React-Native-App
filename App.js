@@ -39,7 +39,7 @@ return(
 
 
 
-      <SafeAreaView>
+      <SafeAreaView style={{marginBottom:20}}>
         <ScrollView>
           <View style={{paddingTop:5}}>
           <View>
@@ -81,13 +81,13 @@ return(
             <TextInput secureTextEntry={true}  style={styles.place} placeholder='Password'/>
           </View>
           <TouchableOpacity>
-          <View >
+          <View style={{}} >
           <Text style={styles.signup}>Sign up</Text>
           </View>
 
           </TouchableOpacity>
         
-          <View style={{marginTop:1}}>
+          <View style={{marginTop:1,alignSelf:'center'}}>
             <Text style={styles.term}>
               By signing up, you agree to our 
             </Text>
@@ -101,14 +101,14 @@ return(
               Have an account? 
             </Text>
             <TouchableOpacity onPress={()=> navigation.navigate('Home')}>
-            <Text style={{paddingTop:70,fontWeight:'bold',fontSize:20,paddingRight:10,color:'#3483eb'}}>
+            <Text style={{paddingTop:70,fontWeight:'bold',fontSize:20,color:'#3483eb'}}>
               Log in 
             </Text>
             </TouchableOpacity>
           </View>
           </View>
           
-        </ScrollView>
+          </ScrollView>
       </SafeAreaView>
     
   );
@@ -186,9 +186,9 @@ const styles = StyleSheet.create({
    
   },
   signup:{
+    textAlign:"center",
     borderRadius:7,
     borderWidth:0.3,
-    paddingLeft:150,
     fontSize:20,
     fontWeight:'bold',
     paddingBottom:12,
@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
         //marginTop:1,
         fontWeight:'bold',
         marginRight:5,
-        marginLeft:80,
+        //marginLeft:80,
         alignSelf:'center',
         paddingTop:70,
         fontWeight:'bold',
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
         },
         raj:{
          flexDirection:'row',
-         paddingRight:100
+         alignSelf:'center'
 
         }
 
