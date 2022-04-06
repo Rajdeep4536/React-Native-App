@@ -13,7 +13,7 @@ import {
   TextInput,placeholder,secureTextEntry,
 } from 'react-native';
 //import Signup from './Signup';
-// comment
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
@@ -41,7 +41,7 @@ return(
 
       <SafeAreaView>
         <ScrollView>
-          <View style={{paddingTop:8}}>
+          <View style={{paddingTop:5}}>
           <View>
             <Text style={styles.Title}>Instagram</Text>
           </View>
@@ -50,7 +50,7 @@ return(
               Sign up to see photos and videos from your friends.
             </Text>
           </View>
-          <TouchableOpacity onPress={()=> navigation.navigate('Home')}>
+          <TouchableOpacity >
            
             <View style={styles.container}>
             <Image source={require('./download.png')} style={styles.fb}/>
@@ -80,7 +80,7 @@ return(
           <View >
             <TextInput secureTextEntry={true}  style={styles.place} placeholder='Password'/>
           </View>
-          <TouchableOpacity onPress={()=>Navigation.navigate('Home')}>
+          <TouchableOpacity>
           <View >
           <Text style={styles.signup}>Sign up</Text>
           </View>
@@ -100,7 +100,7 @@ return(
             <Text style={styles.acc}>
               Have an account? 
             </Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate('Home')}>
             <Text style={{paddingTop:70,fontWeight:'bold',fontSize:20,paddingRight:10,color:'#3483eb'}}>
               Log in 
             </Text>
@@ -251,6 +251,7 @@ return(
 
   <SafeAreaView>
   <ScrollView>
+  
     <View>
       <Text style={style.Title}>Instagram</Text>
     </View>
@@ -263,12 +264,24 @@ return(
       <TextInput secureTextEntry={true}  style={style.place} placeholder='Password'/>
     </View>
     <TouchableOpacity>
-    <View >
-    <Text style={style.login}>Login</Text>
+    <View>
+    <Text style={{ borderRadius:7,
+    borderWidth:0.3,
+    paddingLeft:150,
+    fontSize:20,
+    fontWeight:'bold',
+    paddingBottom:12,
+    marginBottom:10,
+    paddingTop:12,
+    marginLeft:20,
+    marginRight:20,
+    marginTop:10,
+    backgroundColor:'#3483eb',
+    color:'white'}}>Login</Text>
     </View>
     </TouchableOpacity>
     <View>
-      <Text style={{alignSelf:'center',color:'grey',fontSize:15,fontWeight:'bold',paddingTop:12}}>
+      <Text style={{alignSelf:'center',color:'grey',fontSize:18,fontWeight:'bold',paddingTop:12,paddingBottom:10}}>
               OR              
       </Text>
       </View>
@@ -276,14 +289,13 @@ return(
       <View style={style.container}>
       <Image source={require('./download.png')} style={style.fb}/>
 
-     
         <Text style={style.log}>Log in with Facebook</Text>
       </View>
      
     </TouchableOpacity>
        
     <View>
-        <Text style={{paddingTop:20,alignSelf:'center'}}>
+        <Text style={{paddingTop:20,alignSelf:'center',fontSize:20,color:'#3483eb',fontWeight:'bold'}}>
           Forgot Password?
         </Text>
     
@@ -293,41 +305,25 @@ return(
         Don't have an account? 
       </Text>
       <TouchableOpacity>
-      <Text style={{paddingTop:70,fontWeight:'bold',fontSize:20,paddingRight:10,color:'#3483eb'}}>
+      <Text style={{paddingTop:70,fontWeight:'bold',fontSize:22,paddingRight:10,color:'#3483eb'}}>
         Sign up 
       </Text>
       </TouchableOpacity>
     </View>
     <View>
-      <Text  style={{paddingTop:20,alignSelf:'center'}} >
+      <Text  style={{alignSelf:'center',fontSize:20,fontWeight:'bold',color:'black',paddingTop:55}} >
         Get the app.
       </Text>
     </View>
-    <View style={{flexDirection:'row'}}>
-      <Image source={require('./AppStore.jpeg')} style={{height:180,width:220}}/>
-      <Image source={require('./Play.png')}style={{ flex: 1,
-    width: null,
-    height: 200,
-    //paddingTop:100,
-    marginTop:10,
-    resizeMode: 'cover'}}/>
-    </View>
-   
-
-
-
+    <View style={{flexDirection:'row',alignSelf:'center'}}>
+      <Image source={require('./both.png')} style={{height:81,width:310}}/>
+     </View> 
+       
   </ScrollView>
     </SafeAreaView>
 
-
-
-
-
-
-
-
-  
 );};
+
  const style = StyleSheet.create({
   Title: {
   
@@ -336,7 +332,6 @@ return(
     alignSelf: 'center',
     fontWeight: 'bold',
     color:'black',
-    //fontFamily:''
   },
   place:{
     color:'#bfc8c9',
@@ -353,54 +348,41 @@ return(
     borderColor:'#bfc8c9'},
     container:{
       flexDirection:'row',
-      //position:'relative',
-      //borderWidth:0.2,
-      //borderRadius:5,
-      //backgroundColor:'#3483eb',
-      // textAlign:'center',
       alignSelf:'center',
       paddingLeft:50,
       paddingRight:50,
       paddingTop:10
     },
    fb:{ height:28,
-    width:20,
-   // paddingRight:10
-        
-
-
+    width:24,
+   
    },
-   log:{ paddingLeft:18,
-
-
-
+   log:{ paddingLeft:15,
+    color:'#3483eb',
+    fontSize:20,
    },
 
-
-
-    login:{
+   /*login:{
      paddingTop:18,
      alignSelf:'center',
      fontSize:15,
+     color:'black',
+     borderWidth:1,
+     paddingLeft:50,
+     paddingRight:50
 
-
-
-
-
-
-    },
+    },*/
   
     acc:{
-      fontSize:20,
+      fontSize:22,
       //marginTop:1,
       fontWeight:'bold',
       marginRight:5,
-      marginLeft:80,
+      marginLeft:50,
       alignSelf:'center',
       paddingTop:70,
       fontWeight:'bold',
       color:'black'
-      
   
       },
       raj:{
@@ -409,27 +391,6 @@ return(
 
 
       },
-      /*Image:{
-        flexDirection:'row',
-        alignSelf:'center',
-        //height:50,
-        width:44,
-        //alignItems:'center'
-        
-
-
-
-
-      }*/
-  
-  
-    
-    
-
-
-
-
-
 
   });
 
