@@ -267,18 +267,7 @@ return(
     </View>
     <TouchableOpacity>
     <View>
-    <Text style={{ borderRadius:7, textAlign:'center',
-    borderWidth:0.3,
-    fontSize:20,
-    fontWeight:'bold',
-    paddingBottom:12,
-    marginBottom:10,
-    paddingTop:12,
-    marginLeft:20,
-    marginRight:20,
-    marginTop:10,
-    backgroundColor:'#3483eb',
-    color:'white'}}>Login</Text>
+    <Text style={style.Logo}>Login</Text>
     </View>
     </TouchableOpacity>
     <View>
@@ -362,19 +351,21 @@ return(
     color:'#3483eb',
     fontSize:20,
    },
-
-   /*login:{
-     paddingTop:18,
-     alignSelf:'center',
-     fontSize:15,
-     color:'black',
-     borderWidth:1,
-     paddingLeft:50,
-     paddingRight:50
-
-    },*/
-  
-    acc:{
+   Logo:{
+    borderRadius:7, textAlign:'center',
+    borderWidth:0.3,
+    fontSize:20,
+    fontWeight:'bold',
+    paddingBottom:12,
+    marginBottom:10,
+    paddingTop:12,
+    marginLeft:20,
+    marginRight:20,
+    marginTop:10,
+    backgroundColor:'#3483eb',
+    color:'white' 
+   },
+     acc:{
       fontSize:22,
       //marginTop:1,
       fontWeight:'bold',

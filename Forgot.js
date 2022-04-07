@@ -35,8 +35,8 @@ const Forgot = ({navigation}) => {
              <TextInput placeholder='Email, Phone or Username' keyboardType='default' style={styles.place}/>
          </View>
          <TouchableOpacity>
-         <View style={{alignSelf:'center', borderWidth:1, borderRadius:5,padding:12,margin:6,backgroundColor:'#3483eb'}}>
-           <Text style={{paddingHorizontal:104,color:'white',fontWeight:'bold',fontSize:15}}>
+         <View>
+           <Text style={styles.login}>
                Send Login Link
            </Text>    
          </View>
@@ -84,6 +84,22 @@ const Forgot = ({navigation}) => {
 
 
     },
+    login:{ borderRadius:7, textAlign:'center',
+    borderWidth:0.3,
+    fontSize:20,
+    fontWeight:'bold',
+    paddingBottom:12,
+    marginBottom:10,
+    paddingTop:12,
+    marginLeft:20,
+    marginRight:20,
+    marginTop:10,
+    backgroundColor:'#3483eb',
+    color:'white'
+    
+
+
+    }
 
 
 
