@@ -35,7 +35,7 @@ return (<NavigationContainer>
 )
 }
 
-const Main=({navigation})=>{
+const Home=({navigation})=>{
 return(
 
 
@@ -83,7 +83,7 @@ return(
             <TextInput secureTextEntry={true}  style={styles.place} placeholder='Password'/>
           </View>
           <TouchableOpacity>
-          <View style={{}} >
+          <View>
           <Text style={styles.signup}>Sign up</Text>
           </View>
 
@@ -102,7 +102,7 @@ return(
             <Text style={styles.acc}>
               Have an account? 
             </Text>
-            <TouchableOpacity onPress={()=> navigation.navigate('Home')}>
+            <TouchableOpacity onPress={()=> navigation.navigate('Main')}>
             <Text style={{paddingTop:70,fontWeight:'bold',fontSize:20,color:'#3483eb'}}>
               Log in 
             </Text>
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
   
 
 });
-const Home = ({navigation})=>{
+const Main = ({navigation})=>{
 return(
 
   <SafeAreaView>
@@ -294,7 +294,7 @@ return(
       <Text style={style.acc}>
         Don't have an account? 
       </Text>
-      <TouchableOpacity onPress={()=> navigation.navigate('Main')}>
+      <TouchableOpacity onPress={()=> navigation.navigate('Home')}>
       <Text style={{paddingTop:70,fontWeight:'bold',fontSize:22,paddingRight:10,color:'#3483eb'}}>
         Sign up 
       </Text>

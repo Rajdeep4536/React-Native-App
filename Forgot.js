@@ -49,7 +49,7 @@ const Forgot = ({navigation}) => {
          </View>
          <View style={{margin:132}}>
 
-         <Button title='Back to Login' onPress={()=>navigation.navigate('Home')} />
+         <Button title='Back to Login' onPress={()=>navigation.navigate('Main')} />
 
          </View>
         
