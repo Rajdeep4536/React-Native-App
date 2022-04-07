@@ -12,6 +12,7 @@ import {
   View,Image,
   TextInput,placeholder,secureTextEntry,
 } from 'react-native';
+import Forgot from './Forgot.js';
 //import Signup from './Signup';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -23,7 +24,8 @@ return (<NavigationContainer>
 <Stack.Navigator>
 
 <Stack.Screen component={Main} name="Main" options={{headerShown:false}}/>
-<Stack.Screen component={Home} name="Home"/>
+<Stack.Screen component={Home} name="Home"options={{headerShown:false}}/>
+<Stack.Screen component={Forgot} name="Forgot" options={{headerShown:false}}/>
 
 </Stack.Navigator>
 
@@ -246,7 +248,7 @@ const styles = StyleSheet.create({
   
 
 });
-const Home = ()=>{
+const Home = ({navigation})=>{
 return(
 
   <SafeAreaView>
@@ -265,9 +267,8 @@ return(
     </View>
     <TouchableOpacity>
     <View>
-    <Text style={{ borderRadius:7,
+    <Text style={{ borderRadius:7, textAlign:'center',
     borderWidth:0.3,
-    paddingLeft:150,
     fontSize:20,
     fontWeight:'bold',
     paddingBottom:12,
@@ -293,18 +294,18 @@ return(
       </View>
      
     </TouchableOpacity>
-       
+     <TouchableOpacity onPress={()=> navigation.navigate('Forgot')}> 
     <View>
         <Text style={{paddingTop:20,alignSelf:'center',fontSize:20,color:'#3483eb',fontWeight:'bold'}}>
           Forgot Password?
         </Text>
-    
-      </View>
+        </View>
+        </TouchableOpacity> 
       <View style={style.raj}>
       <Text style={style.acc}>
         Don't have an account? 
       </Text>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=> navigation.navigate('Main')}>
       <Text style={{paddingTop:70,fontWeight:'bold',fontSize:22,paddingRight:10,color:'#3483eb'}}>
         Sign up 
       </Text>
@@ -316,7 +317,7 @@ return(
       </Text>
     </View>
     <View style={{flexDirection:'row',alignSelf:'center'}}>
-      <Image source={require('./both.png')} style={{height:81,width:310}}/>
+      <Image source={require('./both.png')} style={{height:84,width:310}}/>
      </View> 
        
   </ScrollView>
@@ -387,7 +388,8 @@ return(
       },
       raj:{
        flexDirection:'row',
-       paddingRight:100
+       //paddingRight:100,
+       alignSelf:'center'
 
 
       },
