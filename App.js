@@ -187,6 +187,7 @@ const styles = StyleSheet.create({
    borderColor:'#bfc8c9'
    
   },
+  
   signup:{
     textAlign:"center",
     borderRadius:7,
