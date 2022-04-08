@@ -13,7 +13,7 @@ import {
   TextInput,placeholder,secureTextEntry,
 } from 'react-native';
 import Forgot from './Forgot.js';
-//import Signup from './Signup';
+
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
